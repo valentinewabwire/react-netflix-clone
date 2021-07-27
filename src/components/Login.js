@@ -4,6 +4,8 @@ import { auth, provider } from "../firebase";
 import { actionTypes } from "../reducer";
 import { useStateValue } from "../StateProvider";
 import "./Login.css";
+import ClearIcon from "@material-ui/icons/Clear";
+import CheckIcon from "@material-ui/icons/Check";
 
 function Login() {
   const [state, dispatch] = useStateValue();
@@ -91,19 +93,24 @@ function Login() {
               <p class="text-lg">
                 Choose one plan and watch everything on Netflix.
               </p>
-              <a href="#" class="btn btn-l text-upper">
+              <a
+                href="#"
+                class="btn btn-l text-upper"
+                type="submit"
+                onClick={signIn}
+              >
                 Try 30 Days Free
               </a>
             </div>
             <table class="table">
               <thead>
-                <tr class="text-white">
-                  <th></th>
-                  <th class="text-upper">Basic</th>
-                  <th class="text-upper">Standard</th>
-                  <th class="text-upper">Premium</th>
-                </tr>
                 <tbody>
+                  <tr class="text-white">
+                    <th></th>
+                    <th class="text-upper">Basic</th>
+                    <th class="text-upper">Standard</th>
+                    <th class="text-upper">Premium</th>
+                  </tr>
                   <tr>
                     <td>Monthly price after free month ends on 7/9/19</td>
                     <td>$8.99</td>
@@ -113,25 +120,37 @@ function Login() {
                   <tr>
                     <td>HD available</td>
                     <td>
-                      <i class="fas fa-times"></i>
+                      <i class="fas fa-times">
+                        <ClearIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Ultra HD available</td>
                     <td>
-                      <i class="fas fa-times"></i>
+                      <i class="fas fa-times">
+                        <ClearIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-times"></i>
+                      <i class="fas fa-times">
+                        <ClearIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                   </tr>
                   <tr>
@@ -143,49 +162,73 @@ function Login() {
                   <tr>
                     <td>Watch on your laptop, TV, phone and tablet</td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Unlimited films and TV programmes</td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>Cancel at any time</td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                   </tr>
                   <tr>
                     <td>First month free</td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                     <td>
-                      <i class="fas fa-check"></i>
+                      <i class="fas fa-check">
+                        <CheckIcon />
+                      </i>
                     </td>
                   </tr>
                 </tbody>
