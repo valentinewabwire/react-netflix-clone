@@ -10,6 +10,10 @@ import CheckIcon from "@material-ui/icons/Check";
 function Login() {
   const [state, dispatch] = useStateValue();
   const signIn = () => {
+    var audio = new Audio(
+      "https://netflixclone254.000webhostapp.com/audio.mp3"
+    );
+    audio.play();
     auth
       .signInWithPopup(provider)
       .then((result) => {
@@ -46,6 +50,7 @@ function Login() {
 
   // Listen for click
   tabItems.forEach((item) => item.addEventListener("click", selectItem));
+
   return (
     <div className="login">
       <header class="showcase">
@@ -61,7 +66,13 @@ function Login() {
         <div class="showcase-content">
           <h1>See what's next.</h1>
           <p>Watch anywhere. Cancel at anytime.</p>
-          <a href="#" class="btn btn-xl" type="submit" onClick={signIn}>
+          <a
+            href="#"
+            class="btn btn-xl"
+            type="submit"
+            // onclick="play()"
+            onClick={signIn}
+          >
             Try 30 days free <i class="fas fa-chevron-right btn-icon"></i>
           </a>
         </div>
