@@ -29,6 +29,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
     },
   };
   const handleClick = async (movie) => {
+    var audio = new Audio(
+      "https://netflixclone254.000webhostapp.com/audio.mp3"
+    );
+    audio.play();
     if (trailerUrl) {
       setTrailerUrl("");
     } else {
