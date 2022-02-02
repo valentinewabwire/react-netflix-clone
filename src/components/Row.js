@@ -19,6 +19,9 @@ function Row({ title, fetchUrl, isLargeRow }) {
     fetchData();
   }, [fetchUrl]);
   // console.table(movies);
+  console.log("Hello world");
+  console.log(movies);
+  console.log("Hello worl1111d");
 
   // Options for react-youtube
   const opts = {

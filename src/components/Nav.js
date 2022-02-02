@@ -12,7 +12,7 @@ function Nav() {
       }
     });
     return () => {
-      window.removeEventListener("scroll");
+      window.removeEventListener("scroll", null); //
     };
   }, []);
 
